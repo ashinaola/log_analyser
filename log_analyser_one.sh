@@ -16,5 +16,5 @@ cat nginx-access.log | awk '{freq[$9]++} END {for (x in freq) {print freq[x], x}
 printf "\n"
 
 # Top 5 user agents
-echo "Top 5 user agents (count agent)"
+echo "Top 5 user agents (count agent):"
 cat nginx-access.log | awk '{freq[$12]++} END {for (x in freq) {print freq[x], x}}' | sort -n | tail -5
